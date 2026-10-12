@@ -1,43 +1,39 @@
-# B2Bware Default Theme
+# Theme name
 
-The reference storefront theme shipped with every B2Bware store. Use it as the starting
-point for your own theme — copy it, restyle it, and re-upload.
+<!--
+Required. The store admin shows this file on the theme's page, and an upload
+is rejected while any of the four "##" sections below is empty. Write for the
+shop owner, not for a developer: plain language, no code. Replace every
+comment with real text. Keep the headings exactly as they are.
+-->
 
-## Where the authoring guide lives
+## Purpose
 
-Everything you need to build a theme is in **[`docs/`](docs/)**. Start at
-**[`docs/README.md`](docs/README.md)** — it's the table of contents and the "load matrix" that
-tells you (or your AI assistant) which page to read for a given task. Always read
-[`docs/hard-rules.md`](docs/hard-rules.md) first.
+<!-- One or two sentences: who the theme is for and what it should achieve. -->
 
-> **Latest version.** The copy in `docs/` shipped with this download and may be outdated. The
-> authoritative, always-current guide is online:
-> https://b2bware.documentationai.com/advanced/storefront-themes
-> Theme contract changelog: https://b2bware.documentationai.com/changelog
+## What this theme changes
 
-## Fastest way to start a new theme
+<!--
+One bullet per visible change, grouped by area. Name the page or section and
+say what the shopper sees, e.g.
+- Header: logo on the left, larger search field, new announcement bar text.
+- Cart page (cart.sidebar): adds a free-delivery note under the totals.
+- Colors and fonts: brand blue buttons, Inter for all text.
+-->
 
-Two public GitHub repos, both with the same project layout:
+## Scripts and libraries
 
-| Want | Repo |
-| --- | --- |
-| **Blank canvas** (no Blade — build from scratch) | https://github.com/SyncSpider-GmbH/theme_b2bware_starter_kit |
-| **Full default theme** (all pages/partials/layouts) | https://github.com/SyncSpider-GmbH/theme_b2bware_default |
+<!--
+Every script, font or library the theme adds and why, e.g.
+- Swiper: product image slider on the product page.
+Write "None." when the theme adds nothing.
+-->
 
-Prefer working in **[Cursor](https://cursor.com)** (recommended, not required): both repos ship
-`.cursor/rules` that point your agent at the right docs. Any AI tool works — the same links are
-in each repo's `README.md` / `AGENTS.md`.
+## Still on the default theme
 
-## Layout
-
-```
-theme.json      metadata (required)
-README.md       this file
-rules.md        thin stub → docs/README.md
-docs/           the full authoring guide (this is what you read)
-layouts/        shop + auth shells
-partials/       header, footer, cart sections, account, …
-components/      product card, price, buttons, …
-pages/          products, product, cart, checkout, account/*, …
-assets/         css / js / images / fonts
-```
+<!--
+Pages and sections the theme does not touch, so they keep receiving
+default-theme updates, e.g.
+- Checkout, account pages, sign-in and registration.
+Write "Nothing — every page is customized." if that is the case.
+-->

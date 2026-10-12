@@ -7,6 +7,26 @@
 This file tracks changes to the **theme authoring contract** (directives, form types, `$store`
 keys, canonical surface, tokens). It is not the platform-wide release log. Dates are UTC.
 
+## 2026-10-11 — Required theme README, section overrides on default pages
+
+- **Hard rule:** every theme ships a root `README.md` with four filled-in sections (`Purpose`,
+  `What this theme changes`, `Scripts and libraries`, `Still on the default theme`). Uploads
+  without it are rejected at the manifest step. An optional root `CHANGELOG.md` is kept too. The
+  store admin shows both on the theme's page. See `theme-readme.md` and `hard-rules.md` §1.
+
+- **New override points** on the default theme: `cart.*`, `checkout.*`, `favorites.*`,
+  `account.nav` / `account.main` on every account page (plus `addresses.list` /
+  `addresses.company`), `<page>.brand` / `<page>.form` on login, register, forgot-password,
+  reset-password and verify-email, and new sections on category, guest-order, proposal-preview,
+  customer-selection, error and not-found. The rendered HTML is unchanged for themes that do not
+  override them.
+- **Docs:** `blade-api.md` §9.0 documents `@extends('default::pages.…')`, single `@section`
+  overrides and `@parent`, and lists every override point (including the existing header,
+  footer, product and listing sections). `checklist.md` §12 now leads with this approach and
+  states that copying a whole page file opts that page out of default-theme updates.
+- **Upload:** a new version can be uploaded from the theme's own admin page. The `theme.json`
+  name must stay the same as the theme it is uploaded into.
+
 ## 2026-10-08 — `@storefrontImage` hard rule + desk media + Bunny API notes
 
 - **Hard rule** (also in `hard-rules.md` §9): every catalog / customer `media_url` in an
